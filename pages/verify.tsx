@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/SU_label"
 import { Input } from "@/components/ui/SU_input"
 import { Button } from "@/components/ui/SU_button"
 import { Separator } from "@/components/ui/SUseparator"
-import { Key } from 'lucide-react';
+// import { Key } from 'lucide-react';
 
 export default function Verify() {
   const router = useRouter();
@@ -71,14 +71,18 @@ export default function Verify() {
       // 요청 응답 콘솔에 출력
       console.log("POST 요청 응답:", response);
 
-      const { success, message, key, auth } = response.data;
+      const { success, message, key, auth, changePw } = response.data;
 
       alert(message);
       if (success) {
         sessionStorage.setItem("key", key);
         sessionStorage.setItem("auth", auth);
         // 성공 시 로직, 예: 인증 성공 페이지로 이동
-        router.push('/admin');
+        if (changePw) {
+          router.push('/policy-cp');
+        } else {
+          router.push('/admin');
+        }        
       }
     } catch (error) {
       // 오류 메시지 콘솔에 출력
