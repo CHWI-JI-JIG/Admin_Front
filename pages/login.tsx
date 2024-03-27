@@ -17,35 +17,29 @@ export default function Login() {
 
   // 로그인 로직
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault(); // 로그인 요청
+    event.preventDefault(); 
     try {
-      const response = await axios.post(`${API_BASE_URL}/api/login`, {
+      const response = await axios.post(`${API_BASE_URL}/api/Adminlogin`, {
         "userId": id,
         "userPassword": password,
       });
 
+      const {success, message, key, email} = response.data
       if (response.data.success) {
         alert("로그인에 성공하였습니다.");
 
-        // 로그인 성공 후 처리 로직(예: 페이지 이동)을 추가할 수 있습니다.
-        const { auth, certification, name, key } = response.data;
-        setSessionData({ auth, certification, key, name });
+        sessionStorage.setItem('key',key)
+        sessionStorage.setItem('email', email)
 
-        //auth에 따른 페이지 이동
-        if (auth === 'BUYER') {
-          router.push('/main');
-        } else if (auth === 'SELLER') {
-          router.push('/seller');
-        } else if (auth === 'ADMIN') {
-          router.push('/admin');
-        } else {
-          alert("알 수 없는 권한입니다.");
-        }
+        window.location.href = "/verify";
       } else {
-        alert("로그인에 실패하였습니다.");
+        alert(message);
+        window.location.reload();
       }
     } catch (error) {
       console.error(error);
+      alert("로그인 처리중 오류가 발생했습니다.")
+      window.location.reload();
     }
   };
 
@@ -53,8 +47,8 @@ export default function Login() {
     <div className="w-full flex items-center justify-center py-12">
       <div className="mx-auto space-y-6 max-w-[400px]">
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">취지직</h1>
-          <p className="text-gray-500 dark:text-gray-400">취지직 쇼핑몰에 오신 여러분을 환영합니다.</p>
+          <h1 className="text-3xl font-bold">취지직 관리자</h1>
+          <p className="text-gray-500 dark:text-gray-400">취지직 관리자만 접근 가능합니다.</p>
         </div>
         <div className="space-y-4">
           <div className="space-y-2">
@@ -70,16 +64,6 @@ export default function Login() {
           <Button className="w-full" type="submit" onClick={handleSubmit}>
             로그인
           </Button>
-          <Button className="w-full" variant="outline">
-            Google로 로그인하기(개발중)
-          </Button>
-          <div className="flex justify-center">
-            <Link href="/sign-up">
-              <a className="text-center text-sm text-gray-500 dark:text-gray-400 underline">
-                회원가입
-              </a>
-            </Link>
-          </div>
         </div>
       </div>
     </div>
