@@ -13,6 +13,7 @@ import { API_BASE_URL } from '@/config/apiConfig';
 import { useRouter } from 'next/router';
 import { handleNextPage, handlePrevPage } from '@/utils/commonUtils';
 
+
 export default function Admin() {
   // 세션 데이터 가져오기
   const { auth, certification, key, name } = getSessionData();
