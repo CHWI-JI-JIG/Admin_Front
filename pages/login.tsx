@@ -25,7 +25,7 @@ export default function Login() {
       });
 
       const {success, message, key, email} = response.data
-      if (response.data.success) {
+      if (success) {
         alert("로그인에 성공하였습니다.");
 
         sessionStorage.setItem('key',key)
