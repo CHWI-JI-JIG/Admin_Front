@@ -9,13 +9,13 @@
     "static/ShNISYYNlxvEUoj9L3lfo/_ssgManifest.js"
   ],
   "rootMainFiles": [
-    "static/chunks/webpack-71e3ee5b480bf543.js",
+    "static/chunks/webpack-8455042c98bb0a6c.js",
     "static/chunks/fd9d1056-cc48c28d170fddc2.js",
     "static/chunks/main-app-60d4180cd4ba8218.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/709-9bf0cab767524824.js",
@@ -24,19 +24,19 @@
       "static/chunks/pages/index-881dcd5666e04d86.js"
     ],
     "/_app": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/pages/_app-75f6107b0260711c.js"
     ],
     "/_error": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/pages/_error-9a890acb1e81c3fc.js"
     ],
     "/admin": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/cb355538-197c880c8d62ab5f.js",
@@ -46,7 +46,16 @@
       "static/chunks/pages/admin-fb33c857506a51cf.js"
     ],
     "/login": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
+      "static/chunks/framework-bb874c398f9edc6a.js",
+      "static/chunks/main-3fd0f0f9f679bfbf.js",
+      "static/chunks/709-9bf0cab767524824.js",
+      "static/chunks/956-e69fb61607967507.js",
+      "static/css/0db244450d9867ce.css",
+      "static/chunks/pages/login-f78c78e1fb59cdf4.js"
+    ],
+    "/policy-cp": [
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/709-9bf0cab767524824.js",
@@ -55,7 +64,7 @@
       "static/chunks/pages/login-f857d29b73a03a52.js"
     ],
     "/verify": [
-      "static/chunks/webpack-71e3ee5b480bf543.js",
+      "static/chunks/webpack-8455042c98bb0a6c.js",
       "static/chunks/framework-bb874c398f9edc6a.js",
       "static/chunks/main-3fd0f0f9f679bfbf.js",
       "static/chunks/709-9bf0cab767524824.js",
